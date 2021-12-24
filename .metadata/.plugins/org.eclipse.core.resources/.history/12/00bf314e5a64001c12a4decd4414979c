@@ -1,0 +1,23 @@
+package com.example.fluxdemo.web;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.fluxdemo.domain.Customer;
+import com.example.fluxdemo.domain.CustomerRepository;
+
+import reactor.core.publisher.Flux;
+
+@SpringBootTest
+public class CustomerControllerTest {
+
+	@Autowired
+	CustomerRepository customerRepository;
+
+	@Test
+	public void 한건찾기_테스트() {
+		Flux<Customer> fCustomer = customerRepository.findAll();
+		fCustomer.subscribe();
+	}
+}

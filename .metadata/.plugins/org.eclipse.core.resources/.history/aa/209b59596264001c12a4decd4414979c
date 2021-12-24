@@ -1,0 +1,24 @@
+package com.example.fluxdemo.domain;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest;
+import org.springframework.context.annotation.Import;
+
+import com.example.fluxdemo.DBinit;
+
+
+@DataR2dbcTest
+@Import(DBinit.class)
+public class CustomerRepositoryTest {
+
+	@Autowired
+	private CustomerRepository customerRepository;
+
+	@Test
+	public void test_findOne() {
+		customerRepository.findById(2L).subscribe((c) -> {
+			System.out.println(c);
+		});
+	}
+}

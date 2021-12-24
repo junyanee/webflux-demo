@@ -1,0 +1,11 @@
+package com.cos.reactivetest;
+
+public class App {
+	public static void main(String[] args) {
+		MyPub pub = new MyPub(); // 퍼블리셔 생성
+		MySub sub = new MySub(); // 섭스크라이버 생성
+
+		pub.subscribe(sub);
+	}
+
+}

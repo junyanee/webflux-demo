@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CustomerRepositoryTest" project="fluxdemo" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.fluxdemo.domain.CustomerRepositoryTest" time="0.274" displayname="CustomerRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.example.fluxdemo.domain.CustomerRepositoryTest]">
+    <testcase name="test_findOne" classname="com.example.fluxdemo.domain.CustomerRepositoryTest" time="0.274" displayname="test_findOne()" uniqueid="[engine:junit-jupiter]/[class:com.example.fluxdemo.domain.CustomerRepositoryTest]/[method:test_findOne()]"/>
+  </testsuite>
+</testrun>

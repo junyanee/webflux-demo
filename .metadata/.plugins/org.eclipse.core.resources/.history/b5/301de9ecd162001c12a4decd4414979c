@@ -1,0 +1,5 @@
+package com.example.fluxdemo.web;
+
+public class CustomerController {
+
+}

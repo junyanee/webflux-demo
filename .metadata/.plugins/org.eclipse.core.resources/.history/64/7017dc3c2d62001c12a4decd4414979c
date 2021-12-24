@@ -1,0 +1,16 @@
+package com.example.fluxtext;
+
+import javax.servlet.Filter;
+
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyFilterConfig {
+
+	public FilterRegistrationBean<Filter> addFilter() {
+		FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>(new MyFilter());
+		bean.addUrlPatterns("/*");
+		return bean;
+	}
+}

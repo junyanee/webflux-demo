@@ -1,0 +1,21 @@
+package com.example.fluxtext.web;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
+
+import com.example.fluxdemo.domain.CustomerRepository;
+
+@WebFluxTest
+@Import(CustomerRepository.class)
+public class CustomerControllerTest {
+
+	@MockBean
+	CustomerRepository customerRepostiory;
+
+	@Test
+	public void 한건찾기_테스트() {
+
+	}
+}

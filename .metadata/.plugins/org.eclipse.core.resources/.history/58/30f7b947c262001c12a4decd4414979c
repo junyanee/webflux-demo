@@ -1,0 +1,34 @@
+package com.cos.reactivetest;
+
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
+public class MySub implements Subscriber<Integer>{
+
+	private Subscription s;
+
+	public void onSubscribe(Subscription s) {
+		System.out.println("구독자: 구독 정보 받음");
+		this.s = s;
+		System.out.println("구독자: 나 이제 신문 한개씩 줘");
+		s.request(1); // 신문 한개씩 매일 받을게
+
+	}
+
+	public void onNext(Integer t) {
+		System.out.println("구독 데이터 전달");
+
+	}
+
+	public void onError(Throwable t) {
+		System.out.println("구독 에러");
+
+	}
+
+	public void onComplete() {
+		System.out.println("구독 완료");
+
+	}
+
+
+}

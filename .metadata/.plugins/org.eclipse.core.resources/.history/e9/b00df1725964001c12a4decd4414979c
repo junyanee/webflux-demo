@@ -1,0 +1,18 @@
+package com.example.fluxtext.web;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import com.example.fluxdemo.domain.CustomerRepository;
+
+@SpringBootTest
+public class CustomerControllerTest {
+
+	@Autowired
+	CustomerRepository customerRepository;
+
+	@Test
+	public void 한건찾기_테스트() {
+		customerRepository.findAll().log();
+	}
+}
